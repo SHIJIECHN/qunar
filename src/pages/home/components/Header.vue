@@ -9,7 +9,7 @@
             <input class="header-input" type="text" />
         </div>
         <div class="header-right">
-            城市
+            {{city}}
             <span class="iconfont">&#xe600;</span>
             </div>
     </div>
@@ -17,7 +17,10 @@
 
 <script>
 export default {
-    nam: 'HomeHeader'
+    nam: 'HomeHeader',
+    props: {
+        city: String
+    }
 
 }
 </script>

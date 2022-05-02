@@ -43,82 +43,11 @@
 <script>
 export default {
     name: 'HomeRecommend',
+    props: {
+        recommendList: Array
+    },
   data () {
     return {
-        recommendList: [
-            {
-                id: '001',
-                imgUrl: 'https://dummyimage.com/165x165/65372c/fff',
-                tag: '可订今日',
-                title: '橘子洲',
-                commentNum: '2754',
-                price: '128',
-                district: '岳麓区'
-            },
-            {
-                id: '002',
-                imgUrl: 'https://dummyimage.com/165x165/65372c/fff',
-                tag: '可订今日',
-                title: '橘子洲',
-                commentNum: '2754',
-                price: '128',
-                district: '岳麓区'
-            },
-            {
-                id: '003',
-                imgUrl: 'https://dummyimage.com/165x165/65372c/fff',
-                tag: '可订今日',
-                title: '橘子洲',
-                commentNum: '2754',
-                price: '128',
-                district: '岳麓区'
-            },
-            {
-                id: '004',
-                imgUrl: 'https://dummyimage.com/165x165/65372c/fff',
-                tag: '可订今日',
-                title: '橘子洲',
-                commentNum: '2754',
-                price: '128',
-                district: '岳麓区'
-            },
-            {
-                id: '005',
-                imgUrl: 'https://dummyimage.com/165x165/65372c/fff',
-                tag: '可订今日',
-                title: '橘子洲',
-                commentNum: '2754',
-                price: '128',
-                district: '岳麓区'
-            },
-            {
-                id: '006',
-                imgUrl: 'https://dummyimage.com/165x165/65372c/fff',
-                tag: '可订今日',
-                title: '橘子洲',
-                commentNum: '2754',
-                price: '128',
-                district: '岳麓区'
-            },
-            {
-                id: '007',
-                imgUrl: 'https://dummyimage.com/165x165/65372c/fff',
-                tag: '可订今日',
-                title: '橘子洲',
-                commentNum: '2754',
-                price: '128',
-                district: '岳麓区'
-            },
-            {
-                id: '008',
-                imgUrl: 'https://dummyimage.com/165x165/65372c/fff',
-                tag: '可订今日',
-                title: '橘子洲',
-                commentNum: '2754',
-                price: '128',
-                district: '岳麓区'
-            },
-        ]
     };
   },
 }

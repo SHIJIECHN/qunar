@@ -1,6 +1,6 @@
 <template>
   <div class="icons-wrapper">
-        <swiper :options="swiperOption">
+        <swiper :options="swiperOption" v-if="isSwiperShow">
             <!-- slides -->
             <swiper-slide v-for="(page, idx) in pages" :key="idx">
             
@@ -14,17 +14,7 @@
             </swiper-slide>
             <!-- Optional controls -->
             <div class="swiper-pagination"  slot="pagination"></div>
-            <!-- <swiper-slide >
-            
-                <div class="icon-box">
-                    <div class="icon-img-box">
-                        <img class="icon-img" src="https://dummyimage.com/165x165/65372c/fff" alt="" />
-                        
-                    </div>
-                    <p class="icon-desc">景点门票</p>
-                </div>
-            </swiper-slide> -->
-            <!-- Optional controls -->
+
             <div class="swiper-pagination"  slot="pagination"></div>
         </swiper>
   </div>
@@ -33,64 +23,15 @@
 <script>
 export default {
     name: "Icons",
+    props:{
+        iconsList: Array
+    },
   data () {
     return {
         swiperOption: {
             autoplay: false,
             loop: true
-        },
-        iconsList: [
-            {
-                id: '001',
-                imgUrl: 'https://dummyimage.com/165x165/65372c/fff',
-                desc: '景点门票'
-            },
-            {
-                id: '002',
-                imgUrl: 'https://dummyimage.com/165x165/39282c/fff',
-                desc: '一日游'
-            },
-            {
-                id: '003',
-                imgUrl: 'https://dummyimage.com/165x165/098273/fff',
-                desc: '长沙必玩'
-            },
-            {
-                id: '004',
-                imgUrl: 'https://dummyimage.com/165x165/653920/fff',
-                desc: '踏青赏花'
-            },
-            {
-                id: '005',
-                imgUrl: 'https://dummyimage.com/165x165/a2039c/fff',
-                desc: '游乐场'
-            },
-            {
-                id: '006',
-                imgUrl: 'https://dummyimage.com/165x165/645789/fff',
-                desc: '动植物园'
-            },
-            {
-                id: '007',
-                imgUrl: 'https://dummyimage.com/165x165/65cccc/fff',
-                desc: '自然风光'
-            },
-            {
-                id: '008',
-                imgUrl: 'https://dummyimage.com/165x165/24572c/fff',
-                desc: '湘西凤凰'
-            },
-            {
-                id: '009',
-                imgUrl: 'https://dummyimage.com/165x165/ffa456/fff',
-                desc: '橘子洲'
-            },
-            {
-                id: '010',
-                imgUrl: 'https://dummyimage.com/165x165/bb238c/fff',
-                desc: '橘子洲'
-            },
-        ]
+        }
     }
   },
   computed: {
@@ -104,6 +45,9 @@ export default {
               pages[page].push(item)
           })
           return pages;
+      },
+      isSwiperShow(){
+          return this.iconsList.length;
       }
   }
 }
