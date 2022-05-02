@@ -1,25 +1,35 @@
 @font-face {
-    font-family: "iconfont";
-    /* Project id 3371648 */
-    src: url('./iconfont/iconfont.woff2?t=1651420259564') format('woff2'), url('./iconfont/iconfont.woff?t=1651420259564') format('woff'), url('./iconfont/iconfont.ttf?t=1651420259564') format('truetype');
+  font-family: "iconfont"; /* Project id 3371648 */
+  src: url('iconfont/iconfont.woff2?t=1651476675267') format('woff2'),
+       url('iconfont/iconfont.woff?t=1651476675267') format('woff'),
+       url('iconfont/iconfont.ttf?t=1651476675267') format('truetype');
 }
 
 .iconfont {
-    font-family: "iconfont" !important;
-    font-size: 16px;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-star:before {
+  content: "\e805";
+}
+
+.icon-aixin:before {
+  content: "\e85c";
 }
 
 .icon-fanhui:before {
-    content: "\e624";
+  content: "\e624";
 }
 
 .icon-xiajiantou:before {
-    content: "\e600";
+  content: "\e600";
 }
 
 .icon-sousuo:before {
-    content: "\e632";
+  content: "\e632";
 }
+
