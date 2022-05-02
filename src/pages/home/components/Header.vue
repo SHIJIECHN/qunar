@@ -8,10 +8,13 @@
             <div class="kw">输入城市/景点/游玩主题</div>
             <input class="header-input" type="text" />
         </div>
-        <div class="header-right">
-            {{city}}
-            <span class="iconfont">&#xe600;</span>
+        <router-link to="/city">
+            <div class="header-right">
+                {{this.city}}
+                <span class="iconfont">&#xe600;</span>
             </div>
+        </router-link>
+        
     </div>
 </template>
 
@@ -73,5 +76,6 @@ export default {
     height: 100%;
     text-align: center;
     line-height: .88rem;
+    color: #fff;
 }
 </style>
