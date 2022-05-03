@@ -1,12 +1,12 @@
 <template>
-  <div class="list">
+  <div class="list" ref="listWrapper">
     <div>
       <div class="hot-cities">
         <div class="hot-cts-title">热门城市</div>
         <ul class="clearfix">
-          <li class="border-top">北京</li>
-          <li class="border-topleft">北京</li>
-          <li class="border-topleft">北京</li>
+          <li>北京</li>
+          <li class="border-left">北京</li>
+          <li class="border-left">北京</li>
           <li class="border-top">北京</li>
           <li class="border-topleft">北京</li>
           <li class="border-topleft">北京</li>
@@ -64,6 +64,34 @@
             <li>阿拉尔</li>
             <li>阿拉尔</li>
             <li>阿拉尔</li>
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
+          </ul>
+      </div>
+      <div class="alphabet-list">
+        <div class="alphabet-list-title">A</div>
+        <ul class="clearfix">
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
+            <li>阿拉尔</li>
           </ul>
       </div>
     </div>
@@ -71,12 +99,18 @@
 </template>
 
 <script>
+import BScroll from 'better-scroll'
+
 export default {
   name: 'CityList',
   data () {
     return {
+
     };
   },
+  mounted(){
+    this.scroll = new BScroll(this.$refs.listWrapper);
+  }
 }
 </script>
 <style lang="stylus" scoped>
@@ -84,10 +118,10 @@ export default {
 div{
   box-sizing: border-box;
 }
-.clearfix{
-  content: '';
-  display: block;
-  clear: both;  
+.clearfix::after {
+	display: block;
+	content: "";
+	clear: both;
 }
 
 .list{
@@ -96,6 +130,7 @@ div{
   left: 0;
   right: 0;
   bottom: 0;  
+  overflow: hidden
 }
 
 .hot-cities{

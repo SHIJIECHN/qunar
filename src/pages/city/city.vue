@@ -8,6 +8,7 @@
 <script>
 import CityHeader from './components/Header.vue'
 import CityList from './components/List.vue'
+import axios from 'axios'
 
 export default {
   name: 'City',
@@ -19,6 +20,16 @@ export default {
     return {
     };
   },
+  methods:{
+    getCityInfo(){
+      axios.get('/api/city.json').then(res=>{
+        this.getCityInfoSuccess();
+      })
+    }
+  },
+  mounted(){
+    this.getCityInfo();
+  }
 }
 </script>
 <style scoped>
